@@ -43,12 +43,12 @@ The outputs of the system include:
    - Braking may continue until the vehicle comes to a complete stop.
 
 3. **Discrete Acceleration and Braking**:
-   - Adjustments are made in discrete steps of `k \cdot f`, where:
+   - Adjustments are made in discrete steps of `k * f`, where:
      - `f` is a constant acceleration/braking value (measured in m/s²).
      - `a` (acceleration/deceleration constant) is configurable during initialization.
 
 4. **Time Interval Updates**:
-   - All values are updated in discrete time intervals of `k \cdot Δt`, where:
+   - All values are updated in discrete time intervals of `k * Δt`, where:
      - `Δt` is the configurable time interval (e.g., 1 millisecond).
 
 ---
