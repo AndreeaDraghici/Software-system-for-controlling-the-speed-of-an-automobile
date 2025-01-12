@@ -1,0 +1,8 @@
+autoTacticChecker/de.prob.eventb.disprover.core.disproverTactic=de.prob.eventb.disprover.core\:2.2.0.202407111051
+autoTacticChecker/org.eventb.pp.ppLasoo=org.eventb.pp\:0.9.0.202406100806-9b87fe13d
+autoTacticChecker/org.eventb.pp.ppRestricted=org.eventb.pp\:0.9.0.202406100806-9b87fe13d
+autoTacticChecker/org.eventb.pp.ppUnrestricted=org.eventb.pp\:0.9.0.202406100806-9b87fe13d
+autoTacticChecker/org.eventb.theory.rbp.rbp0=org.eventb.theory.rbp\:4.0.4.202204011240-f60c57a0
+autoTacticChecker/org.eventb.theory.rbp.rbp1=org.eventb.theory.rbp\:4.0.4.202204011240-f60c57a0
+autoTacticChecker/org.eventb.theory.rbp.rbpxd=org.eventb.theory.rbp\:4.0.4.202204011240-f60c57a0
+eclipse.preferences.version=1

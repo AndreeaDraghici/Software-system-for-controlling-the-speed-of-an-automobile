@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+    <pim project="/NewProject">
+        <rodin_index/>
+        <export_table/>
+        <graph is_sorted="true"/>
+    </pim>
+    <pim project="/DummyTest1">
+        <rodin_index>
+            <descriptor element="/DummyTest1/machine.bum|org.eventb.core.machineFile#machine" name="machine">
+                <occurrence element="/DummyTest1/machine.bum|org.eventb.core.machineFile#machine" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/DummyTest1/machine.bum|org.eventb.core.machineFile#machine|org.eventb.core.event#'" name="INITIALISATION">
+                <occurrence element="/DummyTest1/machine.bum|org.eventb.core.machineFile#machine|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+        </rodin_index>
+        <export_table>
+            <export file="/DummyTest1/machine.bum">
+                <exported element="/DummyTest1/machine.bum|org.eventb.core.machineFile#machine" name="machine"/>
+                <exported element="/DummyTest1/machine.bum|org.eventb.core.machineFile#machine|org.eventb.core.event#'" name="INITIALISATION"/>
+            </export>
+        </export_table>
+        <graph is_sorted="true">
+            <node label="/DummyTest1/machine.bum" mark="false" order_pos="0"/>
+        </graph>
+        <unprocessed file="/DummyTest1/changeMe.bcm"/>
+        <unprocessed file="/DummyTest1/changeMe.bpo"/>
+        <unprocessed file="/DummyTest1/changeMe.bpr"/>
+        <unprocessed file="/DummyTest1/changeMe.bps"/>
+        <unprocessed file="/DummyTest1/changeMe1.bcc"/>
+        <unprocessed file="/DummyTest1/changeMe1.bpo"/>
+        <unprocessed file="/DummyTest1/changeMe1.bpr"/>
+        <unprocessed file="/DummyTest1/changeMe1.bps"/>
+        <unprocessed file="/DummyTest1/machine.bpr"/>
+        <unprocessed file="/DummyTest1/machine.bcm"/>
+        <unprocessed file="/DummyTest1/machine.bpo"/>
+        <unprocessed file="/DummyTest1/machine.bps"/>
+        <unprocessed file="/DummyTest1/contexts.bpr"/>
+        <unprocessed file="/DummyTest1/contexts.bcc"/>
+        <unprocessed file="/DummyTest1/contexts.bpo"/>
+        <unprocessed file="/DummyTest1/contexts.bps"/>
+    </pim>
+    <delta_list/>
+    <indexer_registry>
+        <registry_entry element_type="org.eventb.core.machineFile">
+            <indexer id="machineIndexer"/>
+        </registry_entry>
+        <registry_entry element_type="org.eventb.core.contextFile">
+            <indexer id="contextIndexer"/>
+        </registry_entry>
+    </indexer_registry>
+</index_root>

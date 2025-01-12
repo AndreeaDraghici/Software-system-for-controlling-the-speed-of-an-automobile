@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="DT" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/discCtx.bpo|org.eventb.core.poFile#discCtx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="DT∈ℕ1" org.eventb.core.source="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.axiom#("/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

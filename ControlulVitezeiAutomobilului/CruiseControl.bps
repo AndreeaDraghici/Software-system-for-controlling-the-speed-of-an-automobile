@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv13/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="IncreaseCruiseSpeed/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DecreaseCruiseSpeed/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateSafetyDistance/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="StopSampling/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Sampling/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ApplyPedalCommand/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Accelerate/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BrakeDecrease/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ResetPedalCommand/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="BrakeStop/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+    <pim project="/NewProject">
+        <rodin_index>
+            <descriptor element="/NewProject/changeMeC.buc|org.eventb.core.contextFile#changeMeC" name="changeMeC">
+                <occurrence element="/NewProject/changeMeC.buc|org.eventb.core.contextFile#changeMeC" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/NewProject/changeMe.bum|org.eventb.core.machineFile#changeMe" name="changeMe">
+                <occurrence element="/NewProject/changeMe.bum|org.eventb.core.machineFile#changeMe" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/NewProject/changeMe.bum|org.eventb.core.machineFile#changeMe|org.eventb.core.event#'" name="INITIALISATION">
+                <occurrence element="/NewProject/changeMe.bum|org.eventb.core.machineFile#changeMe|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+        </rodin_index>
+        <export_table>
+            <export file="/NewProject/changeMe.bum">
+                <exported element="/NewProject/changeMe.bum|org.eventb.core.machineFile#changeMe" name="changeMe"/>
+                <exported element="/NewProject/changeMe.bum|org.eventb.core.machineFile#changeMe|org.eventb.core.event#'" name="INITIALISATION"/>
+            </export>
+            <export file="/NewProject/changeMeC.buc">
+                <exported element="/NewProject/changeMeC.buc|org.eventb.core.contextFile#changeMeC" name="changeMeC"/>
+            </export>
+        </export_table>
+        <graph is_sorted="true">
+            <node label="/NewProject/changeMe.bum" mark="false" order_pos="0"/>
+            <node label="/NewProject/changeMeC.buc" mark="false" order_pos="1"/>
+        </graph>
+        <unprocessed file="/NewProject/changeMe.bcm"/>
+        <unprocessed file="/NewProject/changeMe.bpo"/>
+        <unprocessed file="/NewProject/changeMe.bpr"/>
+        <unprocessed file="/NewProject/changeMe.bps"/>
+        <unprocessed file="/NewProject/changeMeC.bcc"/>
+        <unprocessed file="/NewProject/changeMeC.bpo"/>
+        <unprocessed file="/NewProject/changeMeC.bpr"/>
+        <unprocessed file="/NewProject/changeMeC.bps"/>
+    </pim>
+    <delta_list>
+        <delta element="/NewProject/changeMeC.bcc" kind="FILE_CHANGED"/>
+    </delta_list>
+    <indexer_registry>
+        <registry_entry element_type="org.eventb.core.machineFile">
+            <indexer id="machineIndexer"/>
+        </registry_entry>
+        <registry_entry element_type="org.eventb.core.contextFile">
+            <indexer id="contextIndexer"/>
+        </registry_entry>
+    </indexer_registry>
+</index_root>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="INITIALISATION/inv4/INV"/>
+    <org.eventb.core.prProof name="INITIALISATION/inv6/INV"/>
+    <org.eventb.core.prProof name="INITIALISATION/inv7/INV"/>
+    <org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="50∈ℕ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="IncreaseCruiseSpeed/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with cruise_mode=TRUE" org.eventb.core.prHyps="p1">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="CRUISE_MAX_SPEED" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="cruise_mode" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="cruise_speed" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="cruise_mode=TRUE∧cruise_speed+2500≤CRUISE_MAX_SPEED"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="cruise_mode=TRUE"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="canRead∈BOOL">
+            <org.eventb.core.prIdent name="canRead" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="cruise_mode∈BOOL"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="engine_state∈BOOL">
+            <org.eventb.core.prIdent name="engine_state" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="cruise_speed+2500≤CRUISE_MAX_SPEED"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="workingClock∈BOOL">
+            <org.eventb.core.prIdent name="workingClock" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="follow_mode∈BOOL">
+            <org.eventb.core.prIdent name="follow_mode" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="warning_alert∈BOOL">
+            <org.eventb.core.prIdent name="warning_alert" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="emergency_mode∈BOOL">
+            <org.eventb.core.prIdent name="emergency_mode" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="DecreaseCruiseSpeed/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with cruise_mode=TRUE" org.eventb.core.prHyps="p1">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="CRUISE_MIN_SPEED" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="cruise_mode" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.prIdent name="cruise_speed" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="cruise_mode=TRUE"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="canRead∈BOOL">
+            <org.eventb.core.prIdent name="canRead" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="cruise_mode∈BOOL"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="engine_state∈BOOL">
+            <org.eventb.core.prIdent name="engine_state" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="cruise_speed − 2500≥CRUISE_MIN_SPEED"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="workingClock∈BOOL">
+            <org.eventb.core.prIdent name="workingClock" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="cruise_mode=TRUE∧cruise_speed − 2500≥CRUISE_MIN_SPEED"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="follow_mode∈BOOL">
+            <org.eventb.core.prIdent name="follow_mode" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="warning_alert∈BOOL">
+            <org.eventb.core.prIdent name="warning_alert" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="emergency_mode∈BOOL">
+            <org.eventb.core.prIdent name="emergency_mode" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="UpdateSafetyDistance/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="SAFETY_DISTANCE" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="SAFETY_DISTANCE∈ℕ"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="StopSampling/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="workingClock=TRUE">
+            <org.eventb.core.prIdent name="workingClock" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="t=DT">
+            <org.eventb.core.prIdent name="DT" org.eventb.core.type="ℤ"/>
+            <org.eventb.core.prIdent name="t" org.eventb.core.type="ℤ"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="workingClock=TRUE∧t=DT">
+            <org.eventb.core.prIdent name="DT" org.eventb.core.type="ℤ"/>
+            <org.eventb.core.prIdent name="t" org.eventb.core.type="ℤ"/>
+            <org.eventb.core.prIdent name="workingClock" org.eventb.core.type="BOOL"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Sampling/inv10/INV"/>
+</org.eventb.core.prFile>

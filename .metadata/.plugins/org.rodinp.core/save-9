@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<index_root>
+    <pim project="/ControlulVitezeiAutomobilului">
+        <rodin_index>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#)" name="SAFETY_DISTANCE">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="33" loc_char_start="18"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#;" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="38" loc_char_start="23"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="55" loc_char_start="40"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#-" name="cruise_speed">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="27" loc_char_start="15"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#-" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I|org.eventb.core.action#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.assignment" loc_char_end="27" loc_char_start="15"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="33" loc_char_start="21"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="33" loc_char_start="21"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#'" name="CHANGE_BOOL_STATE">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#+" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="17" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="17" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#K" name="TriggerDriverWarning">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#K" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G" name="EnterEmergencyMode">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2" name="CruiseCtx2">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2" kind="org.eventb.core.declaration"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.seesContext#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#5" name="workingClock">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#5" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#2" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#B" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1" name="CruiseCtx1">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1" kind="org.eventb.core.declaration"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.extendsContext#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D" name="StopEngine">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#1" name="safety_distance">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#&gt;" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#1" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#." kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="15" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl" name="CruiseControl">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#L" name="MonitorDistanceSensor">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#L" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#*" name="cruise_mode">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#*" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#6" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#'" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H" name="IncreaseCruiseSpeed">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#(" name="CRUISE_MAX_SPEED">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#," kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#-" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E" name="EnterCruiseMode">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.constant#'" name="DT">
+                <occurrence element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.axiom#(" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="2" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.constant#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#2" name="warning_alert">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#K|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#\/" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#?" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#K|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#2" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#." name="engine_state">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#:" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#L|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#C|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#." kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#C|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="12" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="12" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#M" name="StartSampling">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#M" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#+" name="follow_mode">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#+" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#7" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#(" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="11" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx" name="discCtx">
+                <occurrence element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx" kind="org.eventb.core.declaration"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.seesContext#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.target"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I" name="DecreaseCruiseSpeed">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'" name="INITIALISATION">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#)" name="CRUISE_MIN_SPEED">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#\/" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#)" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#." kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="16" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#3" name="t">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#0" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="1" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="1" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#3" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#\/" name="distance_sensor">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="37" loc_char_start="22"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="37" loc_char_start="22"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="73" loc_char_start="58"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="37" loc_char_start="22"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#\/" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#," kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="15" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#;" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="15" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.constant#(" name="VEHICLE_MAX_SPEED">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.axiom#)" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="17" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#=" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="37" loc_char_start="20"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#(" name="PEDAL_COMMANDS">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#(" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.axiom#*" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#," name="emergency_mode">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#)" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#8" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="14" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D|org.eventb.core.action#+" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#," kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.action#*" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="14" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J" name="UpdateSafetyDistance">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F" name="EnterFollowMode">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#4" name="canRead">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#4" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#1" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="7" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#A" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="7" loc_char_start="0"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#C" name="StartEngine">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#C" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.label"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx" name="CruiseCtx">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx" kind="org.eventb.core.declaration"/>
+            </descriptor>
+            <descriptor element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#0" name="vehicle_speed">
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#0" kind="org.eventb.core.declaration" loc_attribute="org.eventb.core.identifier"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#=" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'|org.eventb.core.action#-" kind="org.eventb.core.modification" loc_attribute="org.eventb.core.assignment" loc_char_end="13" loc_char_start="0"/>
+                <occurrence element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.guard#'" kind="org.eventb.core.reference" loc_attribute="org.eventb.core.predicate" loc_char_end="58" loc_char_start="45"/>
+            </descriptor>
+        </rodin_index>
+        <export_table>
+            <export file="/ControlulVitezeiAutomobilului/CruiseCtx1.buc">
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#)" name="SAFETY_DISTANCE"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#(" name="PEDAL_COMMANDS"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1" name="CruiseCtx1"/>
+            </export>
+            <export file="/ControlulVitezeiAutomobilului/discCtx.buc">
+                <exported element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx" name="discCtx"/>
+                <exported element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.constant#'" name="DT"/>
+            </export>
+            <export file="/ControlulVitezeiAutomobilului/CruiseCtx.buc">
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx" name="CruiseCtx"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#(" name="CRUISE_MAX_SPEED"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#)" name="CRUISE_MIN_SPEED"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#'" name="CHANGE_BOOL_STATE"/>
+            </export>
+            <export file="/ControlulVitezeiAutomobilului/CruiseControl.bum">
+                <exported element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx" name="discCtx"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#2" name="warning_alert"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#," name="emergency_mode"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F" name="EnterFollowMode"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#-" name="cruise_speed"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H" name="IncreaseCruiseSpeed"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#3" name="t"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G" name="EnterEmergencyMode"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J" name="UpdateSafetyDistance"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#M" name="StartSampling"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.constant#(" name="VEHICLE_MAX_SPEED"/>
+                <exported element="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.constant#'" name="DT"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#C" name="StartEngine"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#K" name="TriggerDriverWarning"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#(" name="PEDAL_COMMANDS"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1" name="CruiseCtx1"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#\/" name="distance_sensor"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#+" name="follow_mode"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#." name="engine_state"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#*" name="cruise_mode"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E" name="EnterCruiseMode"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'" name="INITIALISATION"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#4" name="canRead"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#1" name="safety_distance"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl" name="CruiseControl"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#0" name="vehicle_speed"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I" name="DecreaseCruiseSpeed"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.variable#5" name="workingClock"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#)" name="SAFETY_DISTANCE"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D" name="StopEngine"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#L" name="MonitorDistanceSensor"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2" name="CruiseCtx2"/>
+            </export>
+            <export file="/ControlulVitezeiAutomobilului/CruiseCtx2.buc">
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#)" name="SAFETY_DISTANCE"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.constant#(" name="VEHICLE_MAX_SPEED"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2" name="CruiseCtx2"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.constant#(" name="PEDAL_COMMANDS"/>
+                <exported element="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1" name="CruiseCtx1"/>
+            </export>
+        </export_table>
+        <graph is_sorted="true">
+            <node label="/ControlulVitezeiAutomobilului/CruiseCtx1.buc" mark="false" order_pos="0"/>
+            <node label="/ControlulVitezeiAutomobilului/discCtx.buc" mark="false" order_pos="1"/>
+            <node label="/ControlulVitezeiAutomobilului/CruiseCtx.buc" mark="false" order_pos="2"/>
+            <node label="/ControlulVitezeiAutomobilului/CruiseCtx2.buc" mark="false" order_pos="3">
+                <predecessor label="/ControlulVitezeiAutomobilului/CruiseCtx1.buc"/>
+            </node>
+            <node label="/ControlulVitezeiAutomobilului/CruiseControl.bum" mark="false" order_pos="4">
+                <predecessor label="/ControlulVitezeiAutomobilului/CruiseCtx2.buc"/>
+                <predecessor label="/ControlulVitezeiAutomobilului/discCtx.buc"/>
+            </node>
+        </graph>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMe.bcm"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMe.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMe.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMe.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMeC.bcc"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMeC.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMeC.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/changeMeC.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControl.bcm"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControl.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControl.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControl.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx.bcc"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/discCtx.bcc"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/discCtx.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/discCtx.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/discCtx.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx1.bcc"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx1.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx1.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx1.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx2.bcc"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx2.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx2.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseCtx2.bps"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControlFinal.bpr"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControlFinal.bcm"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControlFinal.bpo"/>
+        <unprocessed file="/ControlulVitezeiAutomobilului/CruiseControlFinal.bps"/>
+    </pim>
+    <delta_list/>
+    <indexer_registry>
+        <registry_entry element_type="org.eventb.core.machineFile">
+            <indexer id="machineIndexer"/>
+        </registry_entry>
+        <registry_entry element_type="org.eventb.core.contextFile">
+            <indexer id="contextIndexer"/>
+        </registry_entry>
+    </indexer_registry>
+</index_root>

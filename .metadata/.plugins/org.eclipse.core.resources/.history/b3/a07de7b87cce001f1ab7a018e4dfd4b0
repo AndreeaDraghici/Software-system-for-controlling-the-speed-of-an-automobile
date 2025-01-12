@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm2" org.eventb.core.predicate="CHANGE_BOOL_STATE={TRUE ↦ FALSE,FALSE ↦ TRUE}" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="CHANGE_BOOL_STATE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.constant#'" org.eventb.core.type="ℙ(BOOL×BOOL)"/>
+</org.eventb.core.scContextFile>
