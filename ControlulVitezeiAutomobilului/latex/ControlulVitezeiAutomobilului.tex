@@ -14,13 +14,10 @@
 \MultiHeader{CONTEXT}{CruiseCtx}
 \CONTEXT{CruiseCtx}{}{}
 \CONSTANTS{
-	\Constant{CHANGE\_BOOL\_STATE}{alernarea unei valori bool}
 	\Constant{CRUISE\_MAX\_SPEED}{viteza max admisa a controlului de croaziera}
 	\Constant{CRUISE\_MIN\_SPEED}{viteza min admisa a controlului de croaziera}
 }
 \AXIOMS{
-	\Axiom{axm1}{false}{$CHANGE\_BOOL\_STATE \in{} BOOL \tbij{} BOOL$}{}
-	\Axiom{axm2}{false}{$CHANGE\_BOOL\_STATE = \{TRUE \mapsto{} FALSE,FALSE \mapsto{} TRUE\} $}{\\comutare booleana}
 	\Axiom{axm3}{false}{$CRUISE\_MAX\_SPEED \in{} \nat{}$}{}
 	\Axiom{axm4}{false}{$CRUISE\_MAX\_SPEED = 180000$}{\\180 km/h exprimat în m/s * 1000}
 	\Axiom{axm5}{false}{$CRUISE\_MIN\_SPEED \in{} \nat{}$}{}
@@ -45,7 +42,7 @@
 	\Constant{VEHICLE\_MAX\_SPEED}{viteza max a vehiculului}
 }
 \AXIOMS{
-	\Axiom{axm1}{false}{$VEHICLE\_MAX\_SPEED = 200000$}{\\00 km/h exprimat în unități (m/s x 1000)}
+	\Axiom{axm1}{false}{$VEHICLE\_MAX\_SPEED = 200000$}{\\200 km/h exprimat în unități (m/s x 1000)}
 }
 \END
 \MultiHeader{MACHINE}{CruiseControl}
