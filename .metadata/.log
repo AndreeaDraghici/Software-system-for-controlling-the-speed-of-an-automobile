@@ -1276,3 +1276,27 @@ java.lang.NullPointerException: Cannot invoke "java.util.Collection.size()" beca
 
 !ENTRY org.eclipse.core.jobs 2 2 2025-01-10 20:13:42.574
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eventb.theory.internal.core.util.DeployedStatusUpdater
+!SESSION 2025-01-12 14:50:29.267 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY de.prob.core 1 0 2025-01-12 14:51:12.104
+!MESSAGE Starting ProB CLI for win32 ... Path is D:\Data\_DevTools\Rodin\rodin-3.9.0.202406100806-9b87fe13d-win32.win32.x86_64\rodin\plugins\de.prob.core_9.6.0.202407111051\prob\windows\probcli.exe
+
+!ENTRY de.prob.core 1 0 2025-01-12 14:51:13.551
+!MESSAGE probcli startup output: Starting Socket Server
+
+!ENTRY de.prob.core 1 0 2025-01-12 14:51:13.552
+!MESSAGE probcli startup output: Application Path: d:/data/_devtools/rodin/rodin-3.9.0.202406100806-9b87fe13d-win32.win32.x86_64/rodin/plugins/de.prob.core_9.6.0.202407111051/prob/windows
+
+!ENTRY de.prob.core 1 0 2025-01-12 14:51:13.552
+!MESSAGE probcli startup output: Port: 55074
+
+!ENTRY de.prob.core 1 0 2025-01-12 14:51:13.552
+!MESSAGE probcli startup output: probcli revision: 2619374807d5a40b6ef898f787a2244a6a7691b6
+
+!ENTRY de.prob.core 1 0 2025-01-12 14:51:13.553
+!MESSAGE probcli startup output: user interrupt reference id: 6608
