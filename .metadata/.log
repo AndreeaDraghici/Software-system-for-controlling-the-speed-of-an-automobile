@@ -1840,3 +1840,75 @@ java.lang.NullPointerException: Cannot invoke "java.util.Collection.size()" beca
 	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:125)
 	at org.rodinp.internal.core.indexer.IndexManager$FileIndexing.run(IndexManager.java:191)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.rodinp.core 4 1100 2025-01-13 19:21:58.926
+!MESSAGE Cannot invoke "java.util.Collection.size()" because "c" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.Collection.size()" because "c" is null
+	at java.base/java.util.LinkedHashSet.<init>(LinkedHashSet.java:169)
+	at org.eventb.core.ast.FormulaFactory.getInstance(FormulaFactory.java:156)
+	at org.eventb.internal.core.FormulaExtensionProviderRegistry.getFormulaFactory(FormulaExtensionProviderRegistry.java:98)
+	at org.eventb.core.basis.EventBRoot.getSafeFormulaFactory(EventBRoot.java:119)
+	at org.eventb.internal.core.indexers.ElementIndexer.getFormulaFactory(ElementIndexer.java:46)
+	at org.eventb.internal.core.indexers.ElementIndexer.<init>(ElementIndexer.java:39)
+	at org.eventb.internal.core.indexers.PredicateIndexer.<init>(PredicateIndexer.java:30)
+	at org.eventb.internal.core.indexers.EventIndexer.processPredicateElements(EventIndexer.java:251)
+	at org.eventb.internal.core.indexers.EventIndexer.process(EventIndexer.java:96)
+	at org.eventb.internal.core.indexers.MachineIndexer.processEvents(MachineIndexer.java:217)
+	at org.eventb.internal.core.indexers.MachineIndexer.index(MachineIndexer.java:122)
+	at org.eventb.internal.core.indexers.MachineIndexer.index(MachineIndexer.java:92)
+	at org.eventb.internal.core.indexers.EventBIndexer.index(EventBIndexer.java:63)
+	at org.rodinp.internal.core.indexer.FileIndexingManager.doIndexing(FileIndexingManager.java:142)
+	at org.rodinp.internal.core.indexer.FileIndexingManager.doIndexing(FileIndexingManager.java:126)
+	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:141)
+	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:125)
+	at org.rodinp.internal.core.indexer.IndexManager$FileIndexing.run(IndexManager.java:191)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.rodinp.core 4 1100 2025-01-13 19:22:51.135
+!MESSAGE Cannot invoke "java.util.Collection.size()" because "c" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.Collection.size()" because "c" is null
+	at java.base/java.util.LinkedHashSet.<init>(LinkedHashSet.java:169)
+	at org.eventb.core.ast.FormulaFactory.getInstance(FormulaFactory.java:156)
+	at org.eventb.internal.core.FormulaExtensionProviderRegistry.getFormulaFactory(FormulaExtensionProviderRegistry.java:98)
+	at org.eventb.core.basis.EventBRoot.getSafeFormulaFactory(EventBRoot.java:119)
+	at org.eventb.internal.core.indexers.ElementIndexer.getFormulaFactory(ElementIndexer.java:46)
+	at org.eventb.internal.core.indexers.ElementIndexer.<init>(ElementIndexer.java:39)
+	at org.eventb.internal.core.indexers.AssignmentIndexer.<init>(AssignmentIndexer.java:30)
+	at org.eventb.internal.core.indexers.EventIndexer.processActions(EventIndexer.java:240)
+	at org.eventb.internal.core.indexers.EventIndexer.process(EventIndexer.java:98)
+	at org.eventb.internal.core.indexers.MachineIndexer.processEvents(MachineIndexer.java:217)
+	at org.eventb.internal.core.indexers.MachineIndexer.index(MachineIndexer.java:122)
+	at org.eventb.internal.core.indexers.MachineIndexer.index(MachineIndexer.java:92)
+	at org.eventb.internal.core.indexers.EventBIndexer.index(EventBIndexer.java:63)
+	at org.rodinp.internal.core.indexer.FileIndexingManager.doIndexing(FileIndexingManager.java:142)
+	at org.rodinp.internal.core.indexer.FileIndexingManager.doIndexing(FileIndexingManager.java:126)
+	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:141)
+	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:125)
+	at org.rodinp.internal.core.indexer.IndexManager$FileIndexing.run(IndexManager.java:191)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.rodinp.core 4 1100 2025-01-13 19:23:46.818
+!MESSAGE Cannot invoke "java.util.Collection.size()" because "c" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.util.Collection.size()" because "c" is null
+	at java.base/java.util.LinkedHashSet.<init>(LinkedHashSet.java:169)
+	at org.eventb.core.ast.FormulaFactory.getInstance(FormulaFactory.java:156)
+	at org.eventb.internal.core.FormulaExtensionProviderRegistry.getFormulaFactory(FormulaExtensionProviderRegistry.java:98)
+	at org.eventb.core.basis.EventBRoot.getSafeFormulaFactory(EventBRoot.java:119)
+	at org.eventb.internal.core.indexers.ElementIndexer.getFormulaFactory(ElementIndexer.java:46)
+	at org.eventb.internal.core.indexers.ElementIndexer.<init>(ElementIndexer.java:39)
+	at org.eventb.internal.core.indexers.AssignmentIndexer.<init>(AssignmentIndexer.java:30)
+	at org.eventb.internal.core.indexers.EventIndexer.processActions(EventIndexer.java:240)
+	at org.eventb.internal.core.indexers.EventIndexer.process(EventIndexer.java:98)
+	at org.eventb.internal.core.indexers.MachineIndexer.processEvents(MachineIndexer.java:217)
+	at org.eventb.internal.core.indexers.MachineIndexer.index(MachineIndexer.java:122)
+	at org.eventb.internal.core.indexers.MachineIndexer.index(MachineIndexer.java:92)
+	at org.eventb.internal.core.indexers.EventBIndexer.index(EventBIndexer.java:63)
+	at org.rodinp.internal.core.indexer.FileIndexingManager.doIndexing(FileIndexingManager.java:142)
+	at org.rodinp.internal.core.indexer.FileIndexingManager.doIndexing(FileIndexingManager.java:126)
+	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:141)
+	at org.rodinp.internal.core.indexer.ProjectIndexManager.doIndexing(ProjectIndexManager.java:125)
+	at org.rodinp.internal.core.indexer.IndexManager$FileIndexing.run(IndexManager.java:191)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

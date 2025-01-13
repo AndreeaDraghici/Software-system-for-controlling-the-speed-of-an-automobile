@@ -170,7 +170,8 @@
 }
 \EVT{DecreaseCruiseSpeed}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$cruise\_mode = TRUE \land{} cruise\_speed - 2500 \geq{} CRUISE\_MIN\_SPEED$}{true}{}
+		\Guard{grd1}{false}{$cruise\_mode = TRUE$}{true}{}
+		\Guard{grd2}{false}{$cruise\_speed - 2500 \geq{} CRUISE\_MIN\_SPEED$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_speed \bcmeq{} cruise\_speed - 2500$}{true}{}
@@ -194,7 +195,8 @@
 }
 \EVT{MonitorDistanceAboveSafety}{false}{ordinary}{}{\\distanta mai mare decat pragul de siguranta}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$\\~engine\_state = TRUE \land{}\\~           distance\_sensor > SAFETY\_DISTANCE$}{true}{}
+		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{}
+		\Guard{grd2}{false}{$distance\_sensor > SAFETY\_DISTANCE$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_mode \bcmeq{} TRUE$}{true}{}
@@ -205,7 +207,9 @@
 }
 \EVT{MonitorDistanceWithinSafety}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$\\~engine\_state = TRUE \land{}\\~           distance\_sensor \leq{} SAFETY\_DISTANCE \land{}\\~           distance\_sensor > 0$}{true}{}
+		\Guard{grd1}{false}{$engine\_state = TRUE $}{true}{}
+		\Guard{grd2}{false}{$distance\_sensor \leq{} SAFETY\_DISTANCE$}{true}{}
+		\Guard{grd3}{false}{$distance\_sensor > 0$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_mode \bcmeq{} FALSE$}{true}{}
@@ -216,7 +220,8 @@
 }
 \EVT{MonitorDistanceCritical}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$\\engine\_state = TRUE \land{}\\~           distance\_sensor = 0$}{true}{}
+		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{}
+		\Guard{grd2}{false}{$distance\_sensor = 0$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_mode \bcmeq{} FALSE$}{true}{}
@@ -227,7 +232,8 @@
 }
 \EVT{StartSampling}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$ workingClock = FALSE \land{} canRead = FALSE$}{true}{\\porneste esantionarea doar daca ceasul nu functioneaza si datele nu pot fi citite}
+		\Guard{grd1}{false}{$workingClock = FALSE$}{true}{\\porneste esantionarea doar daca ceasul nu functioneaza si datele nu pot fi citite}
+		\Guard{grd2}{false}{$canRead = FALSE$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$workingClock \bcmeq{} TRUE$}{true}{\\porneste ceasul de esantionare}
@@ -235,7 +241,8 @@
 }
 \EVT{StopSampling}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$workingClock = TRUE \land{} t = DT$}{true}{\\opreste esantionarea cand ceasul functioneaza si timpul ajunge la pragul definit DT}
+		\Guard{grd1}{false}{$workingClock = TRUE$}{true}{\\opreste esantionarea cand ceasul functioneaza si timpul ajunge la pragul definit DT}
+		\Guard{grd2}{false}{$t = DT$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$canRead \bcmeq{} TRUE$}{true}{\\permite citirea datelor}
@@ -245,7 +252,8 @@
 }
 \EVT{Sampling}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$workingClock = TRUE \land{} t < DT$}{true}{\\esantioneaza cat timp ceasul functioneaza si timpul este mai mic decat DT}
+		\Guard{grd1}{false}{$workingClock = TRUE$}{true}{\\esantioneaza cat timp ceasul functioneaza si timpul este mai mic decat DT}
+		\Guard{grd2}{false}{$t < DT$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$t \bcmeq{} t + 1$}{true}{\\incrementeaza contorul de timp t}
@@ -264,7 +272,8 @@
 }
 \EVT{Accelerate}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$pedal\_command = 1 \land{} vehicle\_speed + 5000 \leq{} VEHICLE\_MAX\_SPEED$}{true}{}
+		\Guard{grd1}{false}{$pedal\_command = 1$}{true}{}
+		\Guard{grd2}{false}{$vehicle\_speed + 5000 \leq{} VEHICLE\_MAX\_SPEED$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$vehicle\_speed \bcmeq{} vehicle\_speed + 5000$}{true}{}
@@ -273,7 +282,8 @@
 }
 \EVT{BrakeDecrease}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$pedal\_command = 2 \land{} vehicle\_speed > 5000$}{true}{}
+		\Guard{grd1}{false}{$pedal\_command = 2$}{true}{}
+		\Guard{grd2}{false}{$vehicle\_speed > 5000$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$ vehicle\_speed \bcmeq{} vehicle\_speed - 5000$}{true}{}
@@ -291,7 +301,8 @@
 }
 \EVT{BrakeStop}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$pedal\_command = 2 \land{} vehicle\_speed \leq{} 5000$}{true}{}
+		\Guard{grd1}{false}{$pedal\_command = 2$}{true}{}
+		\Guard{grd2}{false}{$vehicle\_speed \leq{} 5000$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$vehicle\_speed \bcmeq{} 0$}{true}{}
