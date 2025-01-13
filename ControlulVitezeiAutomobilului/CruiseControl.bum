@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="cruise_mode ≔ FALSE" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="cruise_speed ≔ 50000" org.eventb.core.label="act4"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="engine_state ≔ FALSE" org.eventb.core.comment="motor oprit" org.eventb.core.label="act5"/>
-        <org.eventb.core.action name="," org.eventb.core.assignment="distance_sensor ≔ −1" org.eventb.core.label="act6"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="vehicle_speed ≔ 0" org.eventb.core.label="act7"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="safety_distance ≔ 50" org.eventb.core.label="act8"/>
-        <org.eventb.core.action name="/" org.eventb.core.assignment="warning_alert ≔ FALSE" org.eventb.core.label="act9"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="t ≔ 0" org.eventb.core.label="act10"/>
-        <org.eventb.core.action name="1" org.eventb.core.assignment="canRead ≔ FALSE" org.eventb.core.label="act11"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="workingClock ≔ FALSE" org.eventb.core.label="act12"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="pedal_command ≔ 0" org.eventb.core.label="act13"/>
+    <org.eventb.core.event name="'" org.eventb.core.comment="configureaza toate variabilele sistemului in starile lor initiale" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="cruise_mode ≔ FALSE" org.eventb.core.comment="Modul de croaziera este dezactivat" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.comment="Modul de urmarire este dezactivat" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.comment="Modul de urgenta este dezactivat" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="cruise_speed ≔ 50000" org.eventb.core.comment="Viteza de croaziera implicita" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="engine_state ≔ FALSE" org.eventb.core.comment="Motorul este oprit" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="distance_sensor ≔ −1" org.eventb.core.comment="Senzorul de distanta este inactiv" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="vehicle_speed ≔ 0" org.eventb.core.comment="Viteza vehiculului este 0" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="safety_distance ≔ 50" org.eventb.core.comment="Distanta de siguranta initiala este 50" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="warning_alert ≔ FALSE" org.eventb.core.comment="Alerta este dezactivata" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="t ≔ 0" org.eventb.core.comment="Cronometrul incepe de la 0" org.eventb.core.label="act10"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="canRead ≔ FALSE" org.eventb.core.comment="Nu este permisa citirea initial" org.eventb.core.label="act11"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="workingClock ≔ FALSE" org.eventb.core.comment="Ceasul de lucru este dezactivat" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="3" org.eventb.core.assignment="pedal_command ≔ 0" org.eventb.core.comment="Fara nicio comanda activa pe pedala" org.eventb.core.label="act13"/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.comment="Cronometrul de inactivitate este initializat" org.eventb.core.label="act14"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="CruiseCtx2"/>
     <org.eventb.core.seesContext name=")" org.eventb.core.target="discCtx"/>
@@ -30,51 +31,60 @@
     <org.eventb.core.variable name="3" org.eventb.core.comment="variabila de timp folosita pentru esantionare (numar natural)" org.eventb.core.identifier="t"/>
     <org.eventb.core.variable name="4" org.eventb.core.comment="booleana care indica daca datele pot fi citite" org.eventb.core.identifier="canRead"/>
     <org.eventb.core.variable name="5" org.eventb.core.comment="booleana care indica daca ceasul de esantionare functioneaza" org.eventb.core.identifier="workingClock"/>
-    <org.eventb.core.invariant name="6" org.eventb.core.comment="cruise_mode trebuie sa fie o valoare booleana" org.eventb.core.label="inv1" org.eventb.core.predicate="cruise_mode ∈ BOOL"/>
-    <org.eventb.core.invariant name="7" org.eventb.core.comment="follow_mode trebuie sa fie o valoare booleana" org.eventb.core.label="inv2" org.eventb.core.predicate="follow_mode ∈ BOOL"/>
-    <org.eventb.core.invariant name="8" org.eventb.core.comment="emergency_mode trebuie sa fie o valoare booleana" org.eventb.core.label="inv3" org.eventb.core.predicate="emergency_mode ∈ BOOL"/>
-    <org.eventb.core.invariant name="9" org.eventb.core.comment="cruise_speed trebuie sa fie in limitele definite" org.eventb.core.label="inv4" org.eventb.core.predicate="cruise_speed ∈ CRUISE_MIN_SPEED ‥ CRUISE_MAX_SPEED"/>
-    <org.eventb.core.invariant name=":" org.eventb.core.comment="engine_state trebuie sa fie o valoare booleana" org.eventb.core.label="inv5" org.eventb.core.predicate="engine_state ∈ BOOL"/>
-    <org.eventb.core.invariant name=";" org.eventb.core.comment="distance_sensor trebuie sa fie in intervalul specificat" org.eventb.core.label="inv6" org.eventb.core.predicate="distance_sensor ∈ −1 ‥ SAFETY_DISTANCE"/>
-    <org.eventb.core.invariant name="=" org.eventb.core.comment="vehicle_speed trebuie sa fie in limitele definite" org.eventb.core.label="inv7" org.eventb.core.predicate="vehicle_speed ∈ 0 ‥ VEHICLE_MAX_SPEED"/>
-    <org.eventb.core.invariant name="&gt;" org.eventb.core.comment="safety_distance trebuie sa fie un numar natural" org.eventb.core.label="inv8" org.eventb.core.predicate="safety_distance ∈ ℕ"/>
-    <org.eventb.core.invariant name="?" org.eventb.core.comment="warning_alert trebuie sa fie o valoare booleana" org.eventb.core.label="inv9" org.eventb.core.predicate="warning_alert ∈ BOOL"/>
-    <org.eventb.core.invariant name="@" org.eventb.core.comment="t trebuie sa fie un numar natural" org.eventb.core.label="inv10" org.eventb.core.predicate="t ∈ ℕ"/>
-    <org.eventb.core.invariant name="A" org.eventb.core.comment="canRead trebuie sa fie o valoare booleana" org.eventb.core.label="inv11" org.eventb.core.predicate="canRead ∈ BOOL"/>
-    <org.eventb.core.invariant name="B" org.eventb.core.comment="workingClock trebuie sa fie o valoare booleana" org.eventb.core.label="inv12" org.eventb.core.predicate="workingClock ∈ BOOL"/>
-    <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StartEngine">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="se declanseaza doar daca motorul este oprit" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = FALSE"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="engine_state ≔ TRUE" org.eventb.core.comment="seteaza engine_state la TRUE (motor pornit)" org.eventb.core.label="act1"/>
+    <org.eventb.core.invariant name="6" org.eventb.core.comment="Modul de croaziera este activ sau inactiv" org.eventb.core.label="inv1" org.eventb.core.predicate="cruise_mode ∈ BOOL"/>
+    <org.eventb.core.invariant name="7" org.eventb.core.comment="Modul de urmarire este activ sau inactiv" org.eventb.core.label="inv2" org.eventb.core.predicate="follow_mode ∈ BOOL"/>
+    <org.eventb.core.invariant name="8" org.eventb.core.comment="Modul de urgenta este activ sau inactiv" org.eventb.core.label="inv3" org.eventb.core.predicate="emergency_mode ∈ BOOL"/>
+    <org.eventb.core.invariant name="9" org.eventb.core.comment="Viteza de croaziera trebuie sa fie intre limitele stabilite" org.eventb.core.label="inv4" org.eventb.core.predicate="cruise_speed ∈ CRUISE_MIN_SPEED ‥ CRUISE_MAX_SPEED"/>
+    <org.eventb.core.invariant name=":" org.eventb.core.comment="Motorul poate fi pornit sau oprit" org.eventb.core.label="inv5" org.eventb.core.predicate="engine_state ∈ BOOL"/>
+    <org.eventb.core.invariant name=";" org.eventb.core.comment="Senzorul de distanta poate fi intre -1 si distanta de siguranta" org.eventb.core.label="inv6" org.eventb.core.predicate="distance_sensor ∈ −1 ‥ SAFETY_DISTANCE"/>
+    <org.eventb.core.invariant name="=" org.eventb.core.comment="Viteza vehiculului trebuie sa fie intre 0 si viteza maxima permisa" org.eventb.core.label="inv7" org.eventb.core.predicate="vehicle_speed ∈ 0 ‥ VEHICLE_MAX_SPEED"/>
+    <org.eventb.core.invariant name="&gt;" org.eventb.core.comment="Distanta de siguranta este un numar natural" org.eventb.core.label="inv8" org.eventb.core.predicate="safety_distance ∈ ℕ"/>
+    <org.eventb.core.invariant name="?" org.eventb.core.comment="Alerta de avertizare este activa sau inactiva" org.eventb.core.label="inv9" org.eventb.core.predicate="warning_alert ∈ BOOL"/>
+    <org.eventb.core.invariant name="@" org.eventb.core.comment="Cronometrul de esantionare este un numar natural" org.eventb.core.label="inv10" org.eventb.core.predicate="t ∈ ℕ"/>
+    <org.eventb.core.invariant name="A" org.eventb.core.comment="Indica daca se poate efectua o citire" org.eventb.core.label="inv11" org.eventb.core.predicate="canRead ∈ BOOL"/>
+    <org.eventb.core.invariant name="B" org.eventb.core.comment="Starea ceasului de lucru" org.eventb.core.label="inv12" org.eventb.core.predicate="workingClock ∈ BOOL"/>
+    <org.eventb.core.event name="C" org.eventb.core.comment="porneste motorul vehiculului daca acesta este oprit" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StartEngine">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Motorul trebuie sa fie oprit pentru a putea fi pornit" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = FALSE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="engine_state ≔ TRUE" org.eventb.core.comment="Motorul este pornit" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StopEngine">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="se declanseaza doar daca motorul este pornit" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE"/>
+    <org.eventb.core.event name="D" org.eventb.core.comment="opreste motorul vehiculului daca acesta este pornit. Toate modurile sunt dezactivate" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StopEngine">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Motorul trebuie sa fie pornit pentru a putea fi oprit" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="engine_state ≔ FALSE" org.eventb.core.comment="opreste motorul" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="cruise_mode ≔ FALSE" org.eventb.core.comment="reseteaza cruise_mode" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.comment="reseteaza follow_mode" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.comment="reseteaza emergency_mode" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnterCruiseMode">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="conditii pentru a intra in modul cruise" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE ∧ distance_sensor = −1 ∧ vehicle_speed &gt; 0"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="cruise_mode ≔ TRUE" org.eventb.core.comment="activeaza" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.label="act3"/>
+    <org.eventb.core.event name="E" org.eventb.core.comment="activeaza modul de croaziera atunci cand motorul este pornit, nu exista vehicule în apropiere (distance_sensor = -1), iar vehiculul are o viteza mai mare de 0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnterCruiseMode">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Motorul este pornit" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="cruise_mode ≔ TRUE" org.eventb.core.comment="Modul de croaziera este activat" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.comment="Modul de urmarire este dezactivat" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.comment="Modul de urgenta este dezactivat" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.comment="reseteaza cronometrul de inactivitate" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="distance_sensor = −1"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="vehicle_speed &gt; 0"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnterFollowMode">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="conditii pentru a intra in modul follow" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE ∧ distance_sensor ≤ SAFETY_DISTANCE ∧ distance_sensor &gt; 0"/>
+    <org.eventb.core.event name="F" org.eventb.core.comment="ajusteaza comportamentul vehiculului pentru a mentine distanta fata de alte vehicule" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnterFollowMode">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="cruise_mode ≔ FALSE" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="follow_mode ≔ TRUE" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="distance_sensor ≤ SAFETY_DISTANCE"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="distance_sensor &gt; 0"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnterEmergencyMode">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="conditii pentru a intra in modul emergency" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE ∧ distance_sensor = 0"/>
+    <org.eventb.core.event name="G" org.eventb.core.comment="activeaza modul de urgenta atunci când distanta fata de un alt vehicul este 0 (distance_sensor = 0), iar sistemul emite o alerta" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EnterEmergencyMode">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="conditii pentru a intra in modul emergency" org.eventb.core.label="grd1" org.eventb.core.predicate="engine_state = TRUE"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="cruise_mode ≔ FALSE" org.eventb.core.label="act1"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="emergency_mode ≔ TRUE" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="warning_alert ≔ TRUE" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act5"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="distance_sensor = 0"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IncreaseCruiseSpeed">
-        <org.eventb.core.guard name="'" org.eventb.core.comment="conditii pentru a creste viteza in modul cruise" org.eventb.core.label="grd1" org.eventb.core.predicate="cruise_mode = TRUE ∧ cruise_speed + 2500 ≤ CRUISE_MAX_SPEED"/>
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="cruise_mode = TRUE"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="cruise_speed ≔ cruise_speed + 2500" org.eventb.core.comment="creste cruise_speed cu 2500 unitati" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="cruise_speed + 2500 ≤ CRUISE_MAX_SPEED"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DecreaseCruiseSpeed">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="cruise_mode = TRUE ∧ cruise_speed − 2500 ≥ CRUISE_MIN_SPEED"/>
@@ -123,7 +133,7 @@
         <org.eventb.core.guard name="'" org.eventb.core.comment="esantioneaza cat timp ceasul functioneaza si timpul este mai mic decat DT" org.eventb.core.label="grd1" org.eventb.core.predicate="workingClock = TRUE ∧ t &lt; DT"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="t ≔ t + 1" org.eventb.core.comment="incrementeaza contorul de timp t" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="S" org.eventb.core.comment="0: no action, 1: accelerate, 2: brake, 3: reset" org.eventb.core.label="inv13" org.eventb.core.predicate="pedal_command ∈ PEDAL_COMMANDS"/>
+    <org.eventb.core.invariant name="S" org.eventb.core.comment="Comenzile pedalei (0: fara actiune, 1: accelereaza, 2: franeaza, 3: reseteaza)" org.eventb.core.label="inv13" org.eventb.core.predicate="pedal_command ∈ PEDAL_COMMANDS"/>
     <org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ApplyPedalCommand">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="cmd"/>
         <org.eventb.core.guard name="(" org.eventb.core.comment="0: no action, 1: accelerate, 2: brake, 3: reset" org.eventb.core.label="grd1" org.eventb.core.predicate="cmd ∈ {0, 1, 2, 3}"/>
@@ -132,17 +142,31 @@
     <org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Accelerate">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pedal_command = 1 ∧ vehicle_speed + 5000 ≤ VEHICLE_MAX_SPEED"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="vehicle_speed ≔ vehicle_speed + 5000" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="V" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BrakeDecrease">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pedal_command = 2 ∧ vehicle_speed &gt; 5000"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment=" vehicle_speed ≔ vehicle_speed − 5000" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="W" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ResetPedalCommand">
+    <org.eventb.core.event name="W" org.eventb.core.comment="reseteaza comenzile pedalei (pedal_command) la starea initiala" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ResetPedalCommand">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pedal_command = 3"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment=" pedal_command ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="pedal_command ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="X" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BrakeStop">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="pedal_command = 2 ∧ vehicle_speed ≤ 5000"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="vehicle_speed ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="Y" org.eventb.core.identifier="inactivity_timer"/>
+    <org.eventb.core.invariant name="\" org.eventb.core.comment="Cronometrul de inactivitate este intre 0 si limita maxima" org.eventb.core.label="inv14" org.eventb.core.predicate="inactivity_timer ∈  0‥MAX_INACTIVITY"/>
+    <org.eventb.core.event name="]" org.eventb.core.comment="daca vehiculul este inactiv pentru o perioada maxima definita (MAX_INACTIVITY), revine automat la modul de croaziera" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CheckInactivity">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="inactivity_timer = MAX_INACTIVITY"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="cruise_mode ≔ TRUE" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="follow_mode ≔ FALSE" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="emergency_mode ≔ FALSE" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="warning_alert ≔ FALSE" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="inactivity_timer ≔ 0" org.eventb.core.label="act5"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="108">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="94">
+        <org.eventb.core.poIdentifier name="CRUISE_MIN_SPEED" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="CRUISE_MAX_SPEED" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEE" org.eventb.core.predicate="CRUISE_MAX_SPEED∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEF" org.eventb.core.predicate="CRUISE_MAX_SPEED=180000" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#-"/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEG" org.eventb.core.predicate="CRUISE_MIN_SPEED∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEH" org.eventb.core.predicate="CRUISE_MIN_SPEED=10000" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx.buc|org.eventb.core.contextFile#CruiseCtx|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poIdentifier name="SAFETY_DISTANCE" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="PEDAL_COMMANDS" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEI" org.eventb.core.predicate="PEDAL_COMMANDS=0 ‥ 3" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.axiom#*"/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEJ" org.eventb.core.predicate="SAFETY_DISTANCE∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="CRUISE_MIN_SPEEK" org.eventb.core.predicate="SAFETY_DISTANCE=50" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx1.buc|org.eventb.core.contextFile#CruiseCtx1|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poIdentifier name="VEHICLE_MAX_SPEED" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="MAX_INACTIVITY" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="VEHICLE_MAX_SPEEE" org.eventb.core.predicate="VEHICLE_MAX_SPEED=200000" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.axiom#)"/>
+        <org.eventb.core.poPredicate name="VEHICLE_MAX_SPEEF" org.eventb.core.predicate="MAX_INACTIVITY∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="VEHICLE_MAX_SPEEG" org.eventb.core.predicate="MAX_INACTIVITY=30" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseCtx2.buc|org.eventb.core.contextFile#CruiseCtx2|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poIdentifier name="DT" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="VEHICLE_MAX_SPEEH" org.eventb.core.predicate="DT∈ℕ1" org.eventb.core.source="/ControlulVitezeiAutomobilului/discCtx.buc|org.eventb.core.contextFile#discCtx|org.eventb.core.axiom#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="95">
+        <org.eventb.core.poIdentifier name="vehicle_speed" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="t" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="inactivity_timer" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="distance_sensor" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="safety_distance" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="cruise_mode" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="cruise_speed" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="workingClock" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="emergency_mode" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="pedal_command" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="canRead" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="engine_state" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="50000∈CRUISE_MIN_SPEED ‥ CRUISE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="−1∈−1 ‥ SAFETY_DISTANCE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ VEHICLE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="50∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈PEDAL_COMMANDS" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_times"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#INITIALISATION\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_times" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="safety_distance'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="engine_state'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="cruise_speed'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="distance_sensor'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="t'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="vehicle_speed'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="workingClock'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="canRead'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="pedal_command'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_times" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_times" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timet" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="engine_state'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timet" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timet" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=FALSE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#C|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timeu" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="engine_state'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timeu" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timeu" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#D|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="EnterCruiseMode/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="98">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timev"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#EnterCruiseMode\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timev" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="98">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timev" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timev" org.eventb.core.poStamp="98">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE∧distance_sensor=−1∧vehicle_speed&gt;0" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#E|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="EnterFollowMode/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="99">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timew"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#EnterFollowMode\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timew" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="99">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timew" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timew" org.eventb.core.poStamp="99">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE∧distance_sensor≤SAFETY_DISTANCE∧distance_sensor&gt;0" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#F|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="EnterEmergencyMode/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="100">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timex"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#EnterEmergencyMode\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timex" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="100">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timex" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timex" org.eventb.core.poStamp="100">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE∧distance_sensor=0" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#G|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="IncreaseCruiseSpeed/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timey"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cruise_speed+2500∈CRUISE_MIN_SPEED ‥ CRUISE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#IncreaseCruiseSpeed\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timey" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="cruise_speed'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timey" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timey" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cruise_mode=TRUE∧cruise_speed+2500≤CRUISE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#H|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="DecreaseCruiseSpeed/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timez"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cruise_speed − 2500∈CRUISE_MIN_SPEED ‥ CRUISE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#DecreaseCruiseSpeed\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timez" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="cruise_speed'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timez" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timez" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cruise_mode=TRUE∧cruise_speed − 2500≥CRUISE_MIN_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#I|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="UpdateSafetyDistance/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_time{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SAFETY_DISTANCE∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#UpdateSafetyDistance\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_time{" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="safety_distance'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_time{" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_time{" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#J|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_time|" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_time|" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_time\|" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="warning_alert=TRUE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#K|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_time}" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_time}" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_time}" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE∧distance_sensor&gt;SAFETY_DISTANCE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#L|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_time~" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_time~" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_time~" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE∧distance_sensor≤SAFETY_DISTANCE∧distance_sensor&gt;0" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#M|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf'" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf'" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="engine_state=TRUE∧distance_sensor=0" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#N|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf(" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="workingClock'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf(" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf(" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="workingClock=FALSE∧canRead=FALSE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#O|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="StopSampling/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#P"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#StopSampling\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf)" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="t'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="workingClock'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="canRead'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf)" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf)" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="workingClock=TRUE∧t=DT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#P|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Sampling/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf*"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="t+1∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#Q"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#Sampling\/inv10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf*" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="t'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf*" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf*" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="workingClock=TRUE∧t&lt;DT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#Q|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ApplyPedalCommand/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="97">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cmd∈PEDAL_COMMANDS" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#T"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#ApplyPedalCommand\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf+" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="cmd" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="pedal_command'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf+" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf+" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cmd∈{0,1,2,3}" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#T|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Accelerate/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="101">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vehicle_speed+5000∈0 ‥ VEHICLE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#U"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#Accelerate\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="Accelerate/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="101">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#U"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#Accelerate\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf," org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="101">
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="vehicle_speed'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf," org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf," org.eventb.core.poStamp="101">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pedal_command=1∧vehicle_speed+5000≤VEHICLE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#U|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="BrakeDecrease/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="102">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf-"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="vehicle_speed − 5000∈0 ‥ VEHICLE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#V"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#BrakeDecrease\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BrakeDecrease/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="102">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf-"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#V"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#BrakeDecrease\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf-" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="102">
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="vehicle_speed'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf-" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf-" org.eventb.core.poStamp="102">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pedal_command=2∧vehicle_speed&gt;5000" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#V|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ResetPedalCommand/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="102">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf."/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈PEDAL_COMMANDS" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#W"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#ResetPedalCommand\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="ResetPedalCommand/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="102">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf."/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#W"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#ResetPedalCommand\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf." org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="102">
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="pedal_command'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf." org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf." org.eventb.core.poStamp="102">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pedal_command=3" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#W|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="BrakeStop/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="103">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf\/"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ VEHICLE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#X"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#BrakeStop\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="BrakeStop/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="103">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf\/"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#X"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#BrakeStop\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf/" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="103">
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="vehicle_speed'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf/" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf\/" org.eventb.core.poStamp="103">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pedal_command=2∧vehicle_speed≤5000" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#X|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CheckInactivity/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="108">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTALLHYPinactivity_timf0"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#]"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poSequent#CheckInactivity\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTinactivity_timf0" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="108">
+        <org.eventb.core.poIdentifier name="cruise_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="warning_alert'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="inactivity_timer'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="emergency_mode'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="follow_mode'" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPinactivity_timf0" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#EVTIDENTinactivity_timf0" org.eventb.core.poStamp="108">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="inactivity_timer=MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.event#]|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ControlulVitezeiAutomobilului/CruiseControl.bpo|org.eventb.core.poFile#CruiseControl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="95">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cruise_mode∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#6"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="follow_mode∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#7"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="emergency_mode∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#8"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cruise_speed∈CRUISE_MIN_SPEED ‥ CRUISE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="engine_state∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#:"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="distance_sensor∈−1 ‥ SAFETY_DISTANCE" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#;"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="vehicle_speed∈0 ‥ VEHICLE_MAX_SPEED" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#="/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="safety_distance∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#&gt;"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="warning_alert∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#?"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="t∈ℕ" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#@"/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="canRead∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#A"/>
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="workingClock∈BOOL" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#B"/>
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="pedal_command∈PEDAL_COMMANDS" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#S"/>
+        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="inactivity_timer∈0 ‥ MAX_INACTIVITY" org.eventb.core.source="/ControlulVitezeiAutomobilului/CruiseControl.bum|org.eventb.core.machineFile#CruiseControl|org.eventb.core.invariant#\\"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

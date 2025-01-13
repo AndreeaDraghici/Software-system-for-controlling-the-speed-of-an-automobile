@@ -40,9 +40,12 @@
 \CONTEXT{CruiseCtx2}{CruiseCtx1}{}
 \CONSTANTS{
 	\Constant{VEHICLE\_MAX\_SPEED}{viteza max a vehiculului}
+	\Constant{MAX\_INACTIVITY}{ limita max a timpului de inactivitate permis înainte ca sistemul si ia masuri, cum ar fi revenirea automata la modul Cruise Mode}
 }
 \AXIOMS{
-	\Axiom{axm1}{false}{$VEHICLE\_MAX\_SPEED = 200000$}{\\200 km/h exprimat în unități (m/s x 1000)}
+	\Axiom{axm1}{false}{$VEHICLE\_MAX\_SPEED = 200000$}{\\200 km/h exprimat în unitati (m/s x 1000)}
+	\Axiom{axm2}{false}{$MAX\_INACTIVITY \in{} \nat{}$}{}
+	\Axiom{axm3}{false}{$MAX\_INACTIVITY = 30$}{\\30 secunde de inactivitate}
 }
 \END
 \MultiHeader{MACHINE}{CruiseControl}
@@ -61,51 +64,54 @@
 	\Variable{t}{variabila de timp folosita pentru esantionare (numar natural)}
 	\Variable{canRead}{booleana care indica daca datele pot fi citite}
 	\Variable{workingClock}{booleana care indica daca ceasul de esantionare functioneaza}
+	\Variable{inactivity\_timer}{}
 }
 \INVARIANTS{
-	\Invariant{inv1}{false}{$cruise\_mode \in{} BOOL$}{\\cruise$\_$mode trebuie sa fie o valoare booleana}
-	\Invariant{inv2}{false}{$follow\_mode \in{} BOOL$}{\\follow$\_$mode trebuie sa fie o valoare booleana}
-	\Invariant{inv3}{false}{$emergency\_mode \in{} BOOL$}{\\emergency$\_$mode trebuie sa fie o valoare booleana}
-	\Invariant{inv4}{false}{$cruise\_speed \in{} CRUISE\_MIN\_SPEED \upto{} CRUISE\_MAX\_SPEED$}{\\cruise$\_$speed trebuie sa fie in limitele definite}
-	\Invariant{inv5}{false}{$engine\_state \in{} BOOL$}{\\engine$\_$state trebuie sa fie o valoare booleana}
-	\Invariant{inv6}{false}{$distance\_sensor \in{} -1 \upto{} SAFETY\_DISTANCE$}{\\distance$\_$sensor trebuie sa fie in intervalul specificat}
-	\Invariant{inv7}{false}{$vehicle\_speed \in{} 0 \upto{} VEHICLE\_MAX\_SPEED$}{\\vehicle$\_$speed trebuie sa fie in limitele definite}
-	\Invariant{inv8}{false}{$safety\_distance \in{} \nat{}$}{\\safety$\_$distance trebuie sa fie un numar natural}
-	\Invariant{inv9}{false}{$warning\_alert \in{} BOOL$}{\\warning$\_$alert trebuie sa fie o valoare booleana}
-	\Invariant{inv10}{false}{$t \in{} \nat{}$}{\\t trebuie sa fie un numar natural}
-	\Invariant{inv11}{false}{$canRead \in{} BOOL$}{\\canRead trebuie sa fie o valoare booleana}
-	\Invariant{inv12}{false}{$workingClock \in{} BOOL$}{\\workingClock trebuie sa fie o valoare booleana}
-	\Invariant{inv13}{false}{$pedal\_command \in{} PEDAL\_COMMANDS$}{\\0: no action, 1: accelerate, 2: brake, 3: reset}
+	\Invariant{inv1}{false}{$cruise\_mode \in{} BOOL$}{\\Modul de croaziera este activ sau inactiv}
+	\Invariant{inv2}{false}{$follow\_mode \in{} BOOL$}{\\Modul de urmarire este activ sau inactiv}
+	\Invariant{inv3}{false}{$emergency\_mode \in{} BOOL$}{\\Modul de urgenta este activ sau inactiv}
+	\Invariant{inv4}{false}{$cruise\_speed \in{} CRUISE\_MIN\_SPEED \upto{} CRUISE\_MAX\_SPEED$}{\\Viteza de croaziera trebuie sa fie intre limitele stabilite}
+	\Invariant{inv5}{false}{$engine\_state \in{} BOOL$}{\\Motorul poate fi pornit sau oprit}
+	\Invariant{inv6}{false}{$distance\_sensor \in{} -1 \upto{} SAFETY\_DISTANCE$}{\\Senzorul de distanta poate fi intre -1 si distanta de siguranta}
+	\Invariant{inv7}{false}{$vehicle\_speed \in{} 0 \upto{} VEHICLE\_MAX\_SPEED$}{\\Viteza vehiculului trebuie sa fie intre 0 si viteza maxima permisa}
+	\Invariant{inv8}{false}{$safety\_distance \in{} \nat{}$}{\\Distanta de siguranta este un numar natural}
+	\Invariant{inv9}{false}{$warning\_alert \in{} BOOL$}{\\Alerta de avertizare este activa sau inactiva}
+	\Invariant{inv10}{false}{$t \in{} \nat{}$}{\\Cronometrul de esantionare este un numar natural}
+	\Invariant{inv11}{false}{$canRead \in{} BOOL$}{\\Indica daca se poate efectua o citire}
+	\Invariant{inv12}{false}{$workingClock \in{} BOOL$}{\\Starea ceasului de lucru}
+	\Invariant{inv13}{false}{$pedal\_command \in{} PEDAL\_COMMANDS$}{\\Comenzile pedalei (0: fara actiune, 1: accelereaza, 2: franeaza, 3: reseteaza)}
+	\Invariant{inv14}{false}{$inactivity\_timer \in{}  0\upto{}MAX\_INACTIVITY$}{\\Cronometrul de inactivitate este intre 0 si limita maxima}
 }
 \EVENTS{
-\INITIALISATION{false}{}{
+\INITIALISATION{false}{\\configureaza toate variabilele sistemului in starile lor initiale}{
 	\ACTIONS{false}{
-		\Action{act1}{$cruise\_mode \bcmeq{} FALSE$}{true}{}
-		\Action{act2}{$follow\_mode \bcmeq{} FALSE$}{true}{}
-		\Action{act3}{$emergency\_mode \bcmeq{} FALSE$}{true}{}
-		\Action{act4}{$cruise\_speed \bcmeq{} 50000$}{true}{}
-		\Action{act5}{$engine\_state \bcmeq{} FALSE$}{true}{\\motor oprit}
-		\Action{act6}{$distance\_sensor \bcmeq{} -1$}{true}{}
-		\Action{act7}{$vehicle\_speed \bcmeq{} 0$}{true}{}
-		\Action{act8}{$safety\_distance \bcmeq{} 50$}{true}{}
-		\Action{act9}{$warning\_alert \bcmeq{} FALSE$}{true}{}
-		\Action{act10}{$t \bcmeq{} 0$}{true}{}
-		\Action{act11}{$canRead \bcmeq{} FALSE$}{true}{}
-		\Action{act12}{$workingClock \bcmeq{} FALSE$}{true}{}
-		\Action{act13}{$pedal\_command \bcmeq{} 0$}{true}{}
+		\Action{act1}{$cruise\_mode \bcmeq{} FALSE$}{true}{\\Modul de croaziera este dezactivat}
+		\Action{act2}{$follow\_mode \bcmeq{} FALSE$}{true}{\\Modul de urmarire este dezactivat}
+		\Action{act3}{$emergency\_mode \bcmeq{} FALSE$}{true}{\\Modul de urgenta este dezactivat}
+		\Action{act4}{$cruise\_speed \bcmeq{} 50000$}{true}{\\Viteza de croaziera implicita}
+		\Action{act5}{$engine\_state \bcmeq{} FALSE$}{true}{\\Motorul este oprit}
+		\Action{act6}{$distance\_sensor \bcmeq{} -1$}{true}{\\Senzorul de distanta este inactiv}
+		\Action{act7}{$vehicle\_speed \bcmeq{} 0$}{true}{\\Viteza vehiculului este 0}
+		\Action{act8}{$safety\_distance \bcmeq{} 50$}{true}{\\Distanta de siguranta initiala este 50}
+		\Action{act9}{$warning\_alert \bcmeq{} FALSE$}{true}{\\Alerta este dezactivata}
+		\Action{act10}{$t \bcmeq{} 0$}{true}{\\Cronometrul incepe de la 0}
+		\Action{act11}{$canRead \bcmeq{} FALSE$}{true}{\\Nu este permisa citirea initial}
+		\Action{act12}{$workingClock \bcmeq{} FALSE$}{true}{\\Ceasul de lucru este dezactivat}
+		\Action{act13}{$pedal\_command \bcmeq{} 0$}{true}{\\Fara nicio comanda activa pe pedala}
+		\Action{act14}{$inactivity\_timer \bcmeq{} 0$}{true}{\\Cronometrul de inactivitate este initializat}
 	}
 }
-\EVT{StartEngine}{false}{ordinary}{}{}{
+\EVT{StartEngine}{false}{ordinary}{}{\\porneste motorul vehiculului daca acesta este oprit}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$engine\_state = FALSE$}{true}{\\se declanseaza doar daca motorul este oprit}
+		\Guard{grd1}{false}{$engine\_state = FALSE$}{true}{\\Motorul trebuie sa fie oprit pentru a putea fi pornit}
 	}
 	\ACTIONS{true}{
-		\Action{act1}{$engine\_state \bcmeq{} TRUE$}{true}{\\seteaza engine$\_$state la TRUE (motor pornit)}
+		\Action{act1}{$engine\_state \bcmeq{} TRUE$}{true}{\\Motorul este pornit}
 	}
 }
-\EVT{StopEngine}{false}{ordinary}{}{}{
+\EVT{StopEngine}{false}{ordinary}{}{\\opreste motorul vehiculului daca acesta este pornit. Toate modurile sunt dezactivate}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{\\se declanseaza doar daca motorul este pornit}
+		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{\\Motorul trebuie sa fie pornit pentru a putea fi oprit}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$engine\_state \bcmeq{} FALSE$}{true}{\\opreste motorul}
@@ -114,40 +120,49 @@
 		\Action{act4}{$emergency\_mode \bcmeq{} FALSE$}{true}{\\reseteaza emergency$\_$mode}
 	}
 }
-\EVT{EnterCruiseMode}{false}{ordinary}{}{}{
+\EVT{EnterCruiseMode}{false}{ordinary}{}{\\activeaza modul de croaziera atunci cand motorul este pornit, nu exista vehicule în apropiere (distance$\_$sensor = -1), iar vehiculul are o viteza mai mare de 0}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$engine\_state = TRUE \land{} distance\_sensor = -1 \land{} vehicle\_speed > 0$}{true}{\\conditii pentru a intra in modul cruise}
+		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{\\Motorul este pornit}
+		\Guard{grd2}{false}{$distance\_sensor = -1$}{true}{}
+		\Guard{grd3}{false}{$vehicle\_speed > 0$}{true}{}
 	}
 	\ACTIONS{true}{
-		\Action{act1}{$cruise\_mode \bcmeq{} TRUE$}{true}{\\activeaza}
-		\Action{act2}{$follow\_mode \bcmeq{} FALSE$}{true}{}
-		\Action{act3}{$emergency\_mode \bcmeq{} FALSE$}{true}{}
+		\Action{act1}{$cruise\_mode \bcmeq{} TRUE$}{true}{\\Modul de croaziera este activat}
+		\Action{act2}{$follow\_mode \bcmeq{} FALSE$}{true}{\\Modul de urmarire este dezactivat}
+		\Action{act3}{$emergency\_mode \bcmeq{} FALSE$}{true}{\\Modul de urgenta este dezactivat}
+		\Action{act4}{$inactivity\_timer \bcmeq{} 0$}{true}{\\reseteaza cronometrul de inactivitate}
 	}
 }
-\EVT{EnterFollowMode}{false}{ordinary}{}{}{
+\EVT{EnterFollowMode}{false}{ordinary}{}{\\ajusteaza comportamentul vehiculului pentru a mentine distanta fata de alte vehicule}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$engine\_state = TRUE \land{} distance\_sensor \leq{} SAFETY\_DISTANCE \land{} distance\_sensor > 0$}{true}{\\conditii pentru a intra in modul follow}
+		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{}
+		\Guard{grd2}{false}{$distance\_sensor \leq{} SAFETY\_DISTANCE$}{true}{}
+		\Guard{grd3}{false}{$distance\_sensor > 0$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_mode \bcmeq{} FALSE$}{true}{}
 		\Action{act2}{$follow\_mode \bcmeq{} TRUE$}{true}{}
 		\Action{act3}{$emergency\_mode \bcmeq{} FALSE$}{true}{}
+		\Action{act4}{$inactivity\_timer \bcmeq{} 0$}{true}{}
 	}
 }
-\EVT{EnterEmergencyMode}{false}{ordinary}{}{}{
+\EVT{EnterEmergencyMode}{false}{ordinary}{}{\\activeaza modul de urgenta atunci când distanta fata de un alt vehicul este 0 (distance$\_$sensor = 0), iar sistemul emite o alerta}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$engine\_state = TRUE \land{} distance\_sensor = 0$}{true}{\\conditii pentru a intra in modul emergency}
+		\Guard{grd1}{false}{$engine\_state = TRUE$}{true}{\\conditii pentru a intra in modul emergency}
+		\Guard{grd2}{false}{$distance\_sensor = 0$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_mode \bcmeq{} FALSE$}{true}{}
 		\Action{act2}{$follow\_mode \bcmeq{} FALSE$}{true}{}
 		\Action{act3}{$emergency\_mode \bcmeq{} TRUE$}{true}{}
 		\Action{act4}{$warning\_alert \bcmeq{} TRUE$}{true}{}
+		\Action{act5}{$inactivity\_timer \bcmeq{} 0$}{true}{}
 	}
 }
 \EVT{IncreaseCruiseSpeed}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd1}{false}{$cruise\_mode = TRUE \land{} cruise\_speed + 2500 \leq{} CRUISE\_MAX\_SPEED$}{true}{\\conditii pentru a creste viteza in modul cruise}
+		\Guard{grd1}{false}{$cruise\_mode = TRUE$}{true}{}
+		\Guard{grd2}{false}{$cruise\_speed + 2500 \leq{} CRUISE\_MAX\_SPEED$}{true}{}
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$cruise\_speed \bcmeq{} cruise\_speed + 2500$}{true}{\\creste cruise$\_$speed cu 2500 unitati}
@@ -253,6 +268,7 @@
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$vehicle\_speed \bcmeq{} vehicle\_speed + 5000$}{true}{}
+		\Action{act2}{$inactivity\_timer \bcmeq{} 0$}{true}{}
 	}
 }
 \EVT{BrakeDecrease}{false}{ordinary}{}{}{
@@ -261,14 +277,16 @@
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$ vehicle\_speed \bcmeq{} vehicle\_speed - 5000$}{true}{}
+		\Action{act2}{$inactivity\_timer \bcmeq{} 0$}{true}{}
 	}
 }
-\EVT{ResetPedalCommand}{false}{ordinary}{}{}{
+\EVT{ResetPedalCommand}{false}{ordinary}{}{\\reseteaza comenzile pedalei (pedal$\_$command) la starea initiala}{
 	\GUARDS{false}{
 		\Guard{grd1}{false}{$pedal\_command = 3$}{true}{}
 	}
 	\ACTIONS{true}{
-		\Action{act1}{$ pedal\_command \bcmeq{} 0$}{true}{}
+		\Action{act1}{$pedal\_command \bcmeq{} 0$}{true}{}
+		\Action{act2}{$inactivity\_timer \bcmeq{} 0$}{true}{}
 	}
 }
 \EVT{BrakeStop}{false}{ordinary}{}{}{
@@ -277,6 +295,19 @@
 	}
 	\ACTIONS{true}{
 		\Action{act1}{$vehicle\_speed \bcmeq{} 0$}{true}{}
+		\Action{act2}{$inactivity\_timer \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{CheckInactivity}{false}{ordinary}{}{\\daca vehiculul este inactiv pentru o perioada maxima definita (MAX$\_$INACTIVITY), revine automat la modul de croaziera}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$inactivity\_timer = MAX\_INACTIVITY$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$cruise\_mode \bcmeq{} TRUE$}{true}{}
+		\Action{act2}{$follow\_mode \bcmeq{} FALSE$}{true}{}
+		\Action{act3}{$emergency\_mode \bcmeq{} FALSE$}{true}{}
+		\Action{act4}{$warning\_alert \bcmeq{} FALSE$}{true}{}
+		\Action{act5}{$inactivity\_timer \bcmeq{} 0$}{true}{}
 	}
 }
 }
