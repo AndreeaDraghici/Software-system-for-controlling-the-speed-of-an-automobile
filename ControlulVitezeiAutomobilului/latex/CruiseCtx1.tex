@@ -1,0 +1,16 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{CruiseCtx1}
+\CONTEXT{CruiseCtx1}{CruiseCtx}{}
+\CONSTANTS{
+	\Constant{PEDAL\_COMMANDS}{comenzi posibile pentru apasarea pedalelor}
+	\Constant{SAFETY\_DISTANCE}{stabilirea unei distante de siguranta}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$PEDAL\_COMMANDS = 0\upto{}3$}{\\comenzi pentru pedale: 0=nicio actiune, 1=acceleratie, 2=franare, 3=resetare}
+	\Axiom{axm2}{false}{$SAFETY\_DISTANCE \in{} \nat{}$}{}
+	\Axiom{axm3}{false}{$SAFETY\_DISTANCE = 50$}{\\distanta de siguranta are valoarea prestabilita de 50 de metri}
+}
+\END
+\end{document}

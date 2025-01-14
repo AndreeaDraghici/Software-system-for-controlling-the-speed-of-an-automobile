@@ -1,0 +1,16 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{CruiseCtx2}
+\CONTEXT{CruiseCtx2}{CruiseCtx1}{}
+\CONSTANTS{
+	\Constant{VEHICLE\_MAX\_SPEED}{viteza max a vehiculului}
+	\Constant{MAX\_INACTIVITY}{ limita max a timpului de inactivitate permis înainte ca sistemul si ia masuri, cum ar fi revenirea automata la modul Cruise Mode}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$VEHICLE\_MAX\_SPEED = 200000$}{\\200 km/h exprimat în unitati (m/s x 1000)}
+	\Axiom{axm2}{false}{$MAX\_INACTIVITY \in{} \nat{}$}{}
+	\Axiom{axm3}{false}{$MAX\_INACTIVITY = 30$}{\\30 secunde de inactivitate}
+}
+\END
+\end{document}

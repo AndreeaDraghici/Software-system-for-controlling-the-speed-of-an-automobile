@@ -1,0 +1,17 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{CruiseCtx}
+\CONTEXT{CruiseCtx}{}{}
+\CONSTANTS{
+	\Constant{CRUISE\_MAX\_SPEED}{viteza max admisa a controlului de croaziera}
+	\Constant{CRUISE\_MIN\_SPEED}{viteza min admisa a controlului de croaziera}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$CRUISE\_MAX\_SPEED \in{} \nat{}$}{}
+	\Axiom{axm2}{false}{$CRUISE\_MAX\_SPEED = 180000$}{\\180 km/h exprimat în m/s * 1000}
+	\Axiom{axm3}{false}{$CRUISE\_MIN\_SPEED \in{} \nat{}$}{}
+	\Axiom{axm4}{false}{$CRUISE\_MIN\_SPEED = 10000$}{\\10 km/h exprimat în m/s * 1000}
+}
+\END
+\end{document}
